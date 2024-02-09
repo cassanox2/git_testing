@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+</head>
+<body>
+                         <!-- HTML PART -->
+
+    
+    <div>
+        <h1>مدرسة الله واحد العلوم العربية والإسلامية</h1>
+    </div>
+      
+     <div class="input-class">
+        <form action="get">
+        <b>الاسم الكامل:</b> 
+        <input type="text" placeholder="أدخل اسمك الكامل " id="name" > <br>
+        <b>نتيجة :</b>
+        <input type="text" placeholder="أدخل درجاتك هنا" id="score"  > <br>
+        <button type="button"  id="submit">يُقدِّم</button>
+        </form>
+     </div>
+
+                   <!-- JAVASCRIPT PART -->
+    <Script>
+      
+      document.getElementById('submit').addEventListener('click' , function() {
+    var score = document.getElementById('score').value;
+    var name = document.getElementById('name').value;
+
+    if (score>=10 && score<=29) {
+        alert(name + ' 😢عذرًا، لم تتم ترقيتك');
+    } else if (score>=30 && score<=49) {
+        alert( name + ' 😢عذرا، كنت لا تزال تفتقر إلى الخلف');
+    } else if (score>=50 && score<=69) {
+        alert( name + ' 👋ممتاز! أنت جيد للذهاب إلى الفصل التالي ');
+    }else if (score>=70 && score<=99) {
+        alert( name + ' 🎊تهانينا! لقد تمت ترقيتك إلى الفصل التالي ');
+    }
+    else if (score=0) {
+      alert(name + 'آسف 😥 لقد فشلت');
+    }
+});
+    </Script>
+
+                  <!-- CSS PART -->
+    <style>
+     
+     body{
+        background-image: url( whatsapp.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 500px;
+
+     }
+     
+     b {
+        font-size: 20px;
+     }
+    
+     h1 {
+        color:whitesmoke;
+        display: flex;
+        justify-content: center;
+        font-size: 50px;
+        font-style: italic;
+        margin-top: 7%;
+     }
+     .input-class{
+        padding-right: 50px;
+        border: 2px solid black;
+        border-radius: 50px;
+        text-align: right;
+        margin-top: 7%;
+        color: whitesmoke;
+     }
+     input {
+        margin-top: 7px;
+        line-height: 7px;
+        gap: 7px;
+        border-radius: 10px;
+        border: 2px solid black;
+     }
+     button {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        /* padding: 5px; */
+        border-radius:100px;
+        box-sizing: content-box;
+        justify-content:right;
+        text-align: center;
+        font-size: 14px;
+     }
+    </style>
+</body>
+</html>
